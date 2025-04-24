@@ -24,25 +24,30 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(945, 600)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.quantityButton = QPushButton(self.centralwidget)
-        self.quantityButton.setObjectName(u"pushButton_2")
+        self.addButton = QPushButton(self.centralwidget)
+        self.addButton.setObjectName(u"pushButton")
 
-        self.gridLayout.addWidget(self.quantityButton, 2, 2, 1, 1)
+        self.gridLayout.addWidget(self.addButton, 2, 0, 1, 1)
 
         self.editButton = QPushButton(self.centralwidget)
         self.editButton.setObjectName(u"pushButton_3")
 
-        self.gridLayout.addWidget(self.editButton, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.editButton, 2, 2, 1, 1)
 
-        self.addRemoveButton = QPushButton(self.centralwidget)
-        self.addRemoveButton.setObjectName(u"pushButton")
+        self.removeButton = QPushButton(self.centralwidget)
+        self.removeButton.setObjectName(u"pushButton_4")
 
-        self.gridLayout.addWidget(self.addRemoveButton, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.removeButton, 2, 1, 1, 1)
+
+        self.qtdButton = QPushButton(self.centralwidget)
+        self.qtdButton.setObjectName(u"pushButton_2")
+
+        self.gridLayout.addWidget(self.qtdButton, 2, 3, 1, 1)
 
         self.tableWidget = QTableWidget(self.centralwidget)
         if (self.tableWidget.columnCount() < 8):
@@ -72,13 +77,12 @@ class Ui_MainWindow(object):
         self.tableWidget.setAutoFillBackground(False)
         self.tableWidget.setColumnCount(8)
 
-        self.gridLayout.addWidget(self.tableWidget, 0, 0, 1, 3)
+        self.gridLayout.addWidget(self.tableWidget, 0, 0, 1, 4)
 
-        
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 800, 30))
+        self.menubar.setGeometry(QRect(0, 0, 945, 30))
         self.menuProduct_Manager = QMenu(self.menubar)
         self.menuProduct_Manager.setObjectName(u"menuProduct_Manager")
         MainWindow.setMenuBar(self.menubar)
@@ -92,15 +96,14 @@ class Ui_MainWindow(object):
 
         QMetaObject.connectSlotsByName(MainWindow)
         self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-
-
     # setupUi
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.quantityButton.setText(QCoreApplication.translate("MainWindow", u"Add or Subtract Product", None))
+        self.addButton.setText(QCoreApplication.translate("MainWindow", u"Add Product", None))
         self.editButton.setText(QCoreApplication.translate("MainWindow", u"Edit Product", None))
-        self.addRemoveButton.setText(QCoreApplication.translate("MainWindow", u"Add or Remove Product", None))
+        self.removeButton.setText(QCoreApplication.translate("MainWindow", u"Remove Product", None))
+        self.qtdButton.setText(QCoreApplication.translate("MainWindow", u"Change Quantity", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Name", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
@@ -118,7 +121,5 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(7)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Type Edit", None));
         self.menuProduct_Manager.setTitle(QCoreApplication.translate("MainWindow", u"Product Manager", None))
-        
-
     # retranslateUi
 

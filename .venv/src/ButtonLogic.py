@@ -5,8 +5,8 @@ class ButtonLogic(QWidget):
         super().__init__()
         self.tableWidget = tableWidget
 
-    def on_add_remove_clicked(self):
-        print("Add or Remove Product button clicked")
+    def on_add_product_clicked(self):
+        print("Add Product button clicked")
         # Lógica para adicionar ou remover um produto
         # Exemplo: adicionar uma linha na tabela
         row_position = self.tableWidget.rowCount()
