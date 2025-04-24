@@ -122,4 +122,3 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Type Edit", None));
         self.menuProduct_Manager.setTitle(QCoreApplication.translate("MainWindow", u"Product Manager", None))
     # retranslateUi
-
