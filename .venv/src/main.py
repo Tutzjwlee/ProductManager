@@ -1,9 +1,9 @@
 # main.py
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow
-from ProductManager_ui import Ui_MainWindow 
-from SavingProductWindow_ui import SavingWindowUI
-from ButtonLogic import ButtonLogic
+from MainWindow import Ui_MainWindow 
+from SavingWindow import Ui_SaveWindow
+from MainWindowButtonLogic import ButtonLogic
 
 class ProductManagerApp(QMainWindow):
     def __init__(self):
@@ -15,7 +15,7 @@ class ProductManagerApp(QMainWindow):
 class SavingWindowApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.ui = SavingWindowUI()
+        self.ui = Ui_SaveWindow()
         self.ui.setupUi(self)
         self.setWindowTitle("Saving Product Window")
 

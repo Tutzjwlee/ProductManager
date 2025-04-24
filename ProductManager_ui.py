@@ -93,7 +93,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuProduct_Manager.menuAction())
 
         self.retranslateUi(MainWindow)
-
+        self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 

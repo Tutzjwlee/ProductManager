@@ -77,7 +77,7 @@ class Ui_SaveWindow(object):
         self.menubar.addAction(self.menuSaving_Window.menuAction())
 
         self.retranslateUi(SaveWindow)
-
+        self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         QMetaObject.connectSlotsByName(SaveWindow)
     # setupUi
 
